@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sunga8994.github.io/our-moment-2026/sitemap.xml

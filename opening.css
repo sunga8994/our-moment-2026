@@ -1,0 +1,25 @@
+/* The supplied 1080p clip is the visual source for both the kick and the flying ball. */
+.opening{background:#050a12;height:100dvh;isolation:isolate}
+.opening:after{display:none}
+.opening-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.opening-shade{position:absolute;inset:0;background:linear-gradient(180deg,#030913a6,transparent 29%,transparent 75%,#030913a6);pointer-events:none;transition:opacity .18s}
+.opening-caption{top:8%;left:6%;max-width:80%;transition:opacity .2s;pointer-events:none}
+.opening-caption p{font-size:clamp(26px,3.2vw,48px);text-shadow:0 2px 20px #0008}
+.opening-caption span{font-size:11px}
+.video-ball{display:none;position:absolute;z-index:4;max-width:none;pointer-events:none;will-change:transform;transform-origin:center}
+.opening.is-impact .video-ball{display:block}
+.opening.is-playing .opening-status,.opening.is-impact .opening-caption,.opening.is-impact .opening-shade{opacity:0}
+.opening.is-impact .skip-opening{opacity:0;pointer-events:none}
+.sound-opening{position:absolute;z-index:6;left:6%;bottom:5%;padding:10px 16px;border:1px solid #ffffff55;background:#09111fa0;color:#fff;font-size:12px}
+.sound-opening[aria-pressed="true"]{background:#fff;color:#09111f}
+.opening.is-impact .sound-opening{opacity:0;pointer-events:none}
+.opening .opening-status{bottom:13%}
+.opening-status{position:absolute;left:6%;bottom:5%;font-size:12px;letter-spacing:.08em;color:#d0d7e1;transition:opacity .2s}
+.start-opening{position:absolute;z-index:7;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;color:#09111f;padding:16px 24px;font-weight:700;white-space:nowrap}
+.start-opening[hidden]{display:none}
+.opening.is-finishing{transition:opacity .22s}
+.opening.reveal-main{background:#e91c3e}
+.opening.reveal-main .opening-video,.opening.reveal-main .video-ball{opacity:0;transition:opacity .12s}
+#replay-opening:disabled{cursor:default;opacity:.65}
+@media(max-width:700px){.opening:before{content:'';position:absolute;inset:-25px;background:url('assets/kick-poster.jpg') center/cover;filter:blur(20px) brightness(.3)}.opening-video{top:18%;height:72%;bottom:auto;object-position:60% 50%;mask-image:linear-gradient(transparent,#000 7%,#000 93%,transparent)}.opening-caption{top:7%;left:6%;right:6%;max-width:none}.opening-caption p{font-size:clamp(24px,6.5vw,36px)}.opening-caption span{font-size:10px}.opening-status{bottom:11%;font-size:11px}.opening .skip-opening{bottom:5%;right:6%}}
+@media(prefers-reduced-motion:reduce){.opening{display:none}.opening.entry-motion:not([hidden]){display:block}}

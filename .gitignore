@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+*.log
+.env*
+dist/
+.openai/
+.sites-runtime/
+assets/athlete.png
+assets/ball.svg
+assets/kick-opening.mp4
+assets/korea-team-poster.png
+assets/korea-team-reference.png
+assets/yarangi-guide.png
+assets/yarangi-players.png
+assets/yarangi-cheer.png
